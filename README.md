@@ -1,10 +1,10 @@
-Liunx服务器执行以下命令（为了服务器docker对外开放端口）：
-1、systemctl show --property=FragmentPath docker
+Liunx服务器执行以下命令（为了服务器docker对外开放端口）：   
+1、systemctl show --property=FragmentPath docker  
 
-2、vim /usr/lib/systemd/system/docker.service
-修改ExecStart
-原来：
-#ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+2、vim /usr/lib/systemd/system/docker.service  
+修改ExecStart  
+原来：  
+#ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock  
 
 修改为：
 #对外开放 2375端口
